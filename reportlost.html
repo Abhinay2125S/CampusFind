@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report an Item | CampusFind</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">CampusFind</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="lost.html">Lost Items</a>
+            <a href="found.html">Found Items</a>
+            <a href="reportlost.html" class="active-link" aria-current="page">Report an Item</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <h1>Report an item</h1>
+            <p>Tell us what happened and we'll help it get back to its owner.</p>
+        </section>
+
+        <section class="form-section">
+            <form id="report-form" novalidate>
+                <fieldset>
+                    <legend>I want to report</legend>
+                    <label class="choice"><input type="radio" name="type" value="lost" checked> I lost something</label>
+                    <label class="choice"><input type="radio" name="type" value="found"> I found something</label>
+                </fieldset>
+
+                <h2>1. Item details</h2>
+                <div class="field">
+                    <label for="item-name">Item name <span class="req">*</span></label>
+                    <input type="text" id="item-name" placeholder="e.g. Black wireless earbuds" required>
+                </div>
+                <div class="field">
+                    <label for="category">Category <span class="req">*</span></label>
+                    <select id="category" required>
+                        <option value="">Choose a category</option>
+                        <option>Electronics</option>
+                        <option>ID Cards</option>
+                        <option>Books/Notes</option>
+                        <option>Keys</option>
+                        <option>Personal Accessories</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="description">Description</label>
+                    <textarea id="description" rows="3" placeholder="Colour, brand, marks or anything else that helps"></textarea>
+                </div>
+                <div class="field">
+                    <label for="private-detail">Private verification detail (optional)</label>
+                    <input type="text" id="private-detail" placeholder="One unique detail only the owner would know">
+                    <p class="hint">This is not shown publicly. It is used to check the real owner.</p>
+                </div>
+
+                <h2>2. Where and when</h2>
+                <div class="field">
+                    <label for="location"><span id="location-label">Last seen location</span> <span class="req">*</span></label>
+                    <input type="text" id="location" placeholder="e.g. Central Library, 2nd floor" required>
+                </div>
+                <div class="field">
+                    <label for="date"><span id="date-label">Date lost</span> <span class="req">*</span></label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <h2>3. Contact details</h2>
+                <div class="field">
+                    <label for="contact-name">Your name <span class="req">*</span></label>
+                    <input type="text" id="contact-name" required>
+                </div>
+                <div class="field">
+                    <label for="email">Email <span class="req">*</span></label>
+                    <input type="email" id="email" placeholder="you@campus.edu" required>
+                    <p class="hint">Your email is only shared with a verified claimant.</p>
+                </div>
+
+                <label class="choice consent">
+                    <input type="checkbox" id="consent"> I agree to the community guidelines and confirm these details are accurate.
+                </label>
+
+                <p id="form-error" class="form-error" role="alert" hidden></p>
+                <button type="submit" id="submit-btn" class="btn btn-1 submit" disabled>Submit report</button>
+            </form>
+
+            <div id="success" class="success" role="status" hidden>
+                <h2>Report submitted</h2>
+                <p>Thank you. We'll email you if someone matches your report.</p>
+                <a href="index.html" class="btn btn-1">Back to home</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>CampusFind · Built for students. Powered by community.</p>
+        <p><a href="lost.html">Lost Items</a> <a href="found.html">Found Items</a> <a href="reportlost.html">Report an Item</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Found Items | CampusFind</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">CampusFind</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="lost.html">Lost Items</a>
+            <a href="found.html" class="active-link" aria-current="page">Found Items</a>
+            <a href="reportlost.html">Report an Item</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-title"><h1>Found items</h1><p>Items students have handed in or reported found. Recognise yours? Start a claim.</p></section>
+
+        <section class="search">
+            <h2>Search found items</h2>
+            <form id="search-form">
+                <label for="search-input">Search</label>
+                <input type="search" id="search-input" placeholder="Search by item name or campus location…">
+                <button type="submit">Search</button>
+            </form>
+            <ul id="categories">
+                <li><button type="button" class="active" data-category="all">All Categories</button></li>
+                <li><button type="button" data-category="Electronics">Electronics</button></li>
+                <li><button type="button" data-category="ID Cards">ID Cards</button></li>
+                <li><button type="button" data-category="Books/Notes">Books/Notes</button></li>
+                <li><button type="button" data-category="Keys">Keys</button></li>
+                <li><button type="button" data-category="Personal Accessories">Personal Accessories</button></li>
+            </ul>
+        </section>
+
+        <section class="listings">
+            <h2>All found items</h2>
+            <div class="card-grid">
+                <article class="card" data-category="Keys">
+                    <span class="badge badge-found">Found</span>
+                    <span class="chip">Keys</span>
+                    <h3>Set of Three Keys</h3>
+                    <p>Block 12 · Reception</p>
+                    <p><time datetime="2026-11-10">Nov 10, 2026</time></p>
+                    <a href="#">This is mine</a>
+                </article>
+                <article class="card" data-category="ID Cards">
+                    <span class="badge badge-found">Found</span>
+                    <span class="chip">ID Cards</span>
+                    <h3>Library Card</h3>
+                    <p>Central Library · Desk</p>
+                    <p><time datetime="2026-11-09">Nov 09, 2026</time></p>
+                    <a href="#">This is mine</a>
+                </article>
+                <article class="card" data-category="Electronics">
+                    <span class="badge badge-found">Found</span>
+                    <span class="chip">Electronics</span>
+                    <h3>White Phone Charger</h3>
+                    <p>Block 27 · Room No. 301</p>
+                    <p><time datetime="2026-11-08">Nov 08, 2026</time></p>
+                    <a href="#">This is mine</a>
+                </article>
+                <article class="card" data-category="Books/Notes">
+                    <span class="badge badge-found">Found</span>
+                    <span class="chip">Books/Notes</span>
+                    <h3>Physics Textbook</h3>
+                    <p>Science Building · Lab 3</p>
+                    <p><time datetime="2026-11-07">Nov 07, 2026</time></p>
+                    <a href="#">This is mine</a>
+                </article>
+                <article class="card" data-category="Personal Accessories">
+                    <span class="badge badge-found">Found</span>
+                    <span class="chip">Personal Accessories</span>
+                    <h3>Black Umbrella</h3>
+                    <p>Main Gate</p>
+                    <p><time datetime="2026-11-06">Nov 06, 2026</time></p>
+                    <a href="#">This is mine</a>
+                </article>
+                <article class="card" data-category="Electronics">
+                    <span class="badge badge-found">Found</span>
+                    <span class="chip">Electronics</span>
+                    <h3>Blue Power Bank</h3>
+                    <p>Central Library · 1st floor</p>
+                    <p><time datetime="2026-11-05">Nov 05, 2026</time></p>
+                    <a href="#">This is mine</a>
+                </article>
+            </div>
+            <p id="no-results" hidden>No items match your search. Try another word or category.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>CampusFind · Built for students. Powered by community.</p>
+        <p><a href="lost.html">Lost Items</a> <a href="found.html">Found Items</a> <a href="reportlost.html">Report an Item</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | CampusFind</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">CampusFind</a>
+        <nav>
+            <a href="index.html" class="active-link" aria-current="page">Home</a>
+            <a href="lost.html">Lost Items</a>
+            <a href="found.html">Found Items</a>
+            <a href="reportlost.html">Report an Item</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <p class="slogan">Your campus. Your community.</p>
+            <h1>Lost something on campus?</h1>
+            <p>Browse items students have found, or report one you've lost.</p>
+            <a href="found.html" class="btn btn-1">Search Found Items</a>
+            <a href="reportlost.html" class="btn btn-2">Report Lost Item</a>
+        </section>
+
+        <section class="search">
+            <h2>Find what you're looking for</h2>
+            <form id="search-form">
+                <label for="search-input">Search</label>
+                <input type="search" id="search-input" placeholder="Search by item name or campus location…">
+                <button type="submit">Search</button>
+            </form>
+            <ul id="categories">
+                <li><button type="button" class="active" data-category="all">All Categories</button></li>
+                <li><button type="button" data-category="Electronics">Electronics</button></li>
+                <li><button type="button" data-category="ID Cards">ID Cards</button></li>
+                <li><button type="button" data-category="Books/Notes">Books/Notes</button></li>
+                <li><button type="button" data-category="Keys">Keys</button></li>
+                <li><button type="button" data-category="Personal Accessories">Personal Accessories</button></li>
+            </ul>
+        </section>
+
+        <section class="listings">
+            <h2>Around your campus</h2>
+            <div class="card-grid">
+                <article class="card" data-category="Electronics">
+                    <span class="badge">Lost</span>
+                    <span class="chip">Electronics</span>
+                    <h3>Black Wireless Earbuds</h3>
+                    <p>Central Library · 2nd floor</p>
+                    <p><time datetime="2026-11-09">Nov 09, 2026</time></p>
+                    <a href="#">I found this item</a>
+                </article>
+                <article class="card" data-category="Books/Notes">
+                    <span class="badge">Lost</span>
+                    <span class="chip">Books/Notes</span>
+                    <h3>Blue Notebook</h3>
+                    <p>Block 38 · Room No. 202</p>
+                    <p><time datetime="2026-11-06">Nov 06, 2026</time></p>
+                    <a href="#">I found this item</a>
+                </article>
+                <article class="card" data-category="Electronics">
+                    <span class="badge">Lost</span>
+                    <span class="chip">Electronics</span>
+                    <h3>Noise Smartwatch</h3>
+                    <p>Block 27 · Room No. 404</p>
+                    <p><time datetime="2026-11-07">Nov 07, 2026</time></p>
+                    <a href="#">I found this item</a>
+                </article>
+            </div>
+            <p id="no-results" hidden>No items match your search. Try another word or category.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>CampusFind · Built for students. Powered by community.</p>
+        <p><a href="lost.html">Lost Items</a> <a href="found.html">Found Items</a> <a href="reportlost.html">Report an Item</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
